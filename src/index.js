@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './components/App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import configureStore from './redux/configureStore';
+import {Provider} from 'react-redux';
 
-function App(){
-  return <h1>Hello World!</h1>
-}
+const store = configureStore();
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('app')
+  <Provider store ={store}>
+  <Router>
+    <App/>
+  </Router>
+  </Provider>,
+  document.getElementById('root')
 );
 
 
