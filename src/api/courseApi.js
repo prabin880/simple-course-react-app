@@ -1,5 +1,4 @@
 import { handleResponse, handleError } from "./apiUtils";
-const webpack = require("webpack");
 const baseUrl =  JSON.stringify("http://localhost:3001") + "/courses/";
 
 export function getCourses() {
